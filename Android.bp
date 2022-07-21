@@ -37,7 +37,7 @@ java_library {
     srcs: [
         "src/main/**/*.java",
     ],
-
+    min_sdk_version: "30",
     sdk_version: "core_current",
     apex_available: [
         "//apex_available:platform",
@@ -57,7 +57,10 @@ android_test {
     libs: [
         "android.test.base",
     ],
-    min_sdk_version: "33",
+    test_mainline_modules: [
+        "com.google.android.adservices.apex"
+    ],
+    min_sdk_version: "30",
     sdk_version: "test_current",
     test_suites: [
         "general-tests",
