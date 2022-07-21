@@ -15,6 +15,7 @@
   ~ limitations under the License.
   -->
 <configuration description="Config for cbor-java tests">
+    <option name="config-descriptor:metadata" key="mainline-param" value="com.google.android.adservices.apex" />
     <option name="test-suite-tag" value="mts" />
 
     <target_preparer class="com.android.tradefed.targetprep.suite.SuiteApkInstaller">
