@@ -37,6 +37,38 @@ java_library {
     srcs: [
         "src/main/**/*.java",
     ],
-
+    min_sdk_version: "30",
+    // Setting target sdk to 10000 to prevent issues such as b/220675744
+    target_sdk_version: "10000",
     sdk_version: "core_current",
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.adservices",
+    ],
+}
+
+android_test {
+    name: "CborJavaTestCases",
+    srcs: [
+        "src/test/**/*.java",
+    ],
+    static_libs: [
+        "androidx.test.rules",
+        "cbor-java",
+    ],
+    libs: [
+        "android.test.base",
+    ],
+    test_mainline_modules: [
+        "com.google.android.adservices.apex"
+    ],
+    min_sdk_version: "30",
+    // Setting target sdk to 10000 to prevent issues such as b/220675744
+    target_sdk_version: "10000",
+    sdk_version: "test_current",
+    test_suites: [
+        "general-tests",
+        "mts-adservices",
+    ],
+    visibility: ["//visibility:private"],
 }
