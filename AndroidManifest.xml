@@ -18,7 +18,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="co.nstant.in.cbor" >
 
-    <uses-sdk android:minSdkVersion="33" />
     <application />
     <instrumentation
         android:name="androidx.test.runner.AndroidJUnitRunner"
