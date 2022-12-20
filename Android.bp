@@ -40,8 +40,8 @@ java_library {
     min_sdk_version: "30",
     sdk_version: "core_current",
     apex_available: [
+        "//apex_available:anyapex",
         "//apex_available:platform",
-        "com.android.adservices",
     ],
 }
 
