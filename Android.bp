@@ -57,9 +57,6 @@ android_test {
     libs: [
         "android.test.base",
     ],
-    test_mainline_modules: [
-        "com.google.android.adservices.apex"
-    ],
     min_sdk_version: "30",
     sdk_version: "test_current",
     test_suites: [
