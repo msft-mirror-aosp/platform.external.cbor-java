@@ -38,10 +38,11 @@ java_library {
         "src/main/**/*.java",
     ],
     min_sdk_version: "30",
+    host_supported: true,
     sdk_version: "core_current",
     apex_available: [
+        "//apex_available:anyapex",
         "//apex_available:platform",
-        "com.android.adservices",
     ],
 }
 
@@ -56,9 +57,6 @@ android_test {
     ],
     libs: [
         "android.test.base",
-    ],
-    test_mainline_modules: [
-        "com.google.android.adservices.apex"
     ],
     min_sdk_version: "30",
     sdk_version: "test_current",
