@@ -56,7 +56,7 @@ android_test {
         "cbor-java",
     ],
     libs: [
-        "android.test.base",
+        "android.test.base.stubs.test",
     ],
     min_sdk_version: "30",
     sdk_version: "test_current",
