@@ -35,7 +35,6 @@ public class ArrayDecoder extends AbstractDecoder<Array> {
                     throw new CborException("Unexpected end of stream");
                 }
                 if (Special.BREAK.equals(dataItem)) {
-                    array.add(Special.BREAK);
                     break;
                 }
                 array.add(dataItem);
